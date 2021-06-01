@@ -47,3 +47,20 @@ function timer(){
         sec = 0;
     }
 }
+
+function start(){
+    interval = setInterval(timer,10);
+}
+
+function pause(){
+    clearInterval(interval);
+}
+function reset(){
+    pause();
+    min = 0;
+    sec = 0;
+    msec = 0;
+    msecHeading.value = min;
+    secHeading.value = sec;
+    msecHeading.value = msec;
+}
