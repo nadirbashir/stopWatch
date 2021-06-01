@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-origin:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body{
+    display: grid;
+    height: 100%;
+    text-align: center;
+    place-items: center;
+    background-color: #dde6f0;
+}
+
+.circular{
+    width: 200px;
+    height: 200px;
+    /* background: red; */
+    position: relative;
+    transform: scale(2);
+}
+
+.circular .inner{
+    position: absolute;
+    /* display: none; */
+    z-index: 6;
+    top: 50%;
+    left: 50%;
+    height: 160px;
+    width: 160px;
+    margin: -80px 0 0 -80px;
+    background: #dde6f0;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
+.circular .bar{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border-radius:100%;
+    clip: rect(0px, 200px, 200px, 100px);
+}
+
+.circle .bar .progress{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius:100%;
+    clip: rect(0px, 100px, 200px, 0px);
+    background: #4158d0;
+}
+.circle .left .progress{
+    z-index: 1;
+    animation: left 4s linear both;
+}
+@keyframes left {
+    100%{
+        transform: rotate(180deg);
+    }
+}
+.circle .right{
+    z-index: 3;
+    transform: rotate(180deg);
+}
+.circle .right .progress{
+    animation: right 4s linear both;
+    animation-delay: 4s;
+}
+@keyframes right {
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+.circular .time{
+    z-index: 7;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.time > input{
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+.buttons button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    font-weight: 800;
+    color: #dde6f0;
+    background: #4158d0;
+}
