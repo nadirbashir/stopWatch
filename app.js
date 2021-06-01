@@ -24,3 +24,26 @@
 //     clearInterval(interval);
 // },5000)
 
+var min = 0;
+var sec = 0;
+var msec = 0;
+
+var minHeading = document.getElementById("min");
+var secHeading = document.getElementById("sec");
+var msecHeading = document.getElementById("msec");
+var interval;
+
+function timer(){
+    msec++;
+    msecHeading.value = msec;
+    if(msec >= 100){
+        sec++;
+        secHeading.value = sec;
+        msec = 0;
+    }
+    else if(sec >= 60){
+        min++;
+        minHeading.value = min;
+        sec = 0;
+    }
+}
