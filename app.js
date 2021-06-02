@@ -50,10 +50,13 @@ function timer(){
 
 function start(){
     interval = setInterval(timer,10);
+    document.getElementById("btnStart").setAttribute("disabled","");
 }
 
 function pause(){
     clearInterval(interval);
+    document.getElementById("btnStart").removeAttribute("disabled");
+
 }
 function reset(){
     pause();
@@ -64,3 +67,14 @@ function reset(){
     secHeading.value = sec;
     msecHeading.value = msec;
 }
+
+// const seconds = document.querySelector(".sec").value;
+// let counter = 0;
+// setInterval(()=>{
+//     if(counter == 60){
+//         clearInterval();
+//     }else{
+//         counter += 1;
+//         seconds = counter; 
+//     }
+// },900)

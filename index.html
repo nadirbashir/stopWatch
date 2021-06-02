@@ -11,9 +11,13 @@
     <div class="circular">
         <div class="inner"></div>
         <div class="time">
-            <input type="text" name="" id="min" value = "0">
-            <input type="text" name="" id="sec" value= "0">
-            <input type="text" name="" id="msec" value="0">
+            <input type="text" name="mm" id="min" value = "0">
+            <input type="text" name="ss" id="sec" value= "0">
+            <input type="text" name="ms" id="msec" value="0">
+            <br>
+            <label for="mm">mm</label>
+            <label for="ss">ss</label>
+            <label for="ms">ms</label>
         </div>
         <div class="circle">
             <div class="bar left">
@@ -25,9 +29,11 @@
         </div>
     </div>
     <div class="buttons">
-        <button class="" id="" onclick="start()">Start</button>
-        <button class="" id="" onclick="stop()">Pause</button>
-        <button class="" id="" onclick="reset()">Stop</button>
+        <button class="" id="btnStart" onclick="start()">Start</button>
+        <button class="" id="btnPause" onclick="pause()">Pause</button>
+        <button class="" id="btnReset" onclick="reset()">Reset</button>
+        <br>
+        <button onclick="">Set Timer</button>
     </div>
 </body>
 <script src="app.js"></script>

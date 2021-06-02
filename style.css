@@ -9,7 +9,7 @@ html,body{
     height: 100%;
     text-align: center;
     place-items: center;
-    background-color: #dde6f0;
+    background-color: #1a1f38;
 }
 
 .circular{
@@ -17,7 +17,8 @@ html,body{
     height: 200px;
     /* background: red; */
     position: relative;
-    transform: scale(2);
+    top: 20%;
+    transform: scale(1.5);
 }
 
 .circular .inner{
@@ -26,10 +27,10 @@ html,body{
     z-index: 6;
     top: 50%;
     left: 50%;
-    height: 160px;
-    width: 160px;
-    margin: -80px 0 0 -80px;
-    background: #dde6f0;
+    height: 180px;
+    width: 180px;
+    margin: -90px 0 0 -90px;
+    background: #1a1f38;
     border-radius: 100%;
     box-shadow: 0 1px 0 rgba(0,0,0,0.2);
 }
@@ -38,7 +39,7 @@ html,body{
     position: absolute;
     height: 100%;
     width: 100%;
-    background: #fff;
+    background: #1a1f38;
     border-radius:100%;
     clip: rect(0px, 200px, 200px, 100px);
 }
@@ -49,11 +50,11 @@ html,body{
     width: 100%;
     border-radius:100%;
     clip: rect(0px, 100px, 200px, 0px);
-    background: #4158d0;
+    background: #c3b20f;
 }
 .circle .left .progress{
     z-index: 1;
-    animation: left 4s linear both;
+    animation: left 0.5s linear both;
 }
 @keyframes left {
     100%{
@@ -65,8 +66,8 @@ html,body{
     transform: rotate(180deg);
 }
 .circle .right .progress{
-    animation: right 4s linear both;
-    animation-delay: 4s;
+    animation: right 0.5s linear both;
+    animation-delay: 0.5s;
 }
 @keyframes right {
     100%{
@@ -81,18 +82,32 @@ html,body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.time > input{
+.time input{
     width: 30px;
     height: 30px;
     border: none;
     text-align: center;
+    color: #c3b20f;
+    background: #1a1f38;
+}
+.time > label{
+    color:#c3b20f;
+    margin-right: 7px;
 }
 
 .buttons button{
     width: 100px;
-    height: 30px;
-    border: none;
-    font-weight: 800;
-    color: #dde6f0;
-    background: #4158d0;
+    height: 50px;
+    margin: 10px;
+    font-weight: bold;
+    color: #c3b20f;
+    background: #1a1f38;
+    border: 1px solid #c3b20f;
+    border-radius: 5px;
+}
+.buttons button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: #c3b20f;
+    color: #1a1f38;
 }
