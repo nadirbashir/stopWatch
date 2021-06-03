@@ -8,12 +8,15 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="header">
+        <h1 class="heading">Stop Watch</h1>
+    </div>
     <div class="circular">
         <div class="inner"></div>
         <div class="time">
-            <input type="text" name="mm" id="min" value = "0">
-            <input type="text" name="ss" id="sec" value= "0">
-            <input type="text" name="ms" id="msec" value="0">
+            <input type="text" name="mm" id="min" value = "0" maxlength="2" onfocus="borderYellow(this)" onblur="removeBorder(this)">
+            <input type="text" name="ss" id="sec" value= "0" maxlength="2" onfocus="borderYellow(this)" onblur="removeBorder(this)">
+            <input type="text" name="ms" id="msec" value="0" onfocus="borderYellow(this)" onblur="removeBorder(this)">
             <br>
             <label for="mm">mm</label>
             <label for="ss">ss</label>
@@ -33,7 +36,7 @@
         <button class="" id="btnPause" onclick="pause()">Pause</button>
         <button class="" id="btnReset" onclick="reset()">Reset</button>
         <br>
-        <button onclick="">Set Timer</button>
+        <button onclick="setTimer()">Set Timer</button>
     </div>
 </body>
 <script src="app.js"></script>

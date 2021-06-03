@@ -11,13 +11,15 @@ html,body{
     place-items: center;
     background-color: #1a1f38;
 }
-
+.heading{
+    color: #c3b20f;
+}
 .circular{
     width: 200px;
     height: 200px;
     /* background: red; */
     position: relative;
-    top: 20%;
+    /* top: 20%; */
     transform: scale(1.5);
 }
 
@@ -83,16 +85,19 @@ html,body{
     transform: translate(-50%, -50%);
 }
 .time input{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border: none;
     text-align: center;
     color: #c3b20f;
     background: #1a1f38;
 }
+input:focus{
+    outline: none;
+}
 .time > label{
     color:#c3b20f;
-    margin-right: 7px;
+    margin-right: 5px;
 }
 
 .buttons button{

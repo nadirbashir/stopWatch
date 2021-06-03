@@ -33,7 +33,7 @@ var secHeading = document.getElementById("sec");
 var msecHeading = document.getElementById("msec");
 var interval;
 
-function timer(){
+function stopWatch(){
     msec++;
     msecHeading.value = msec;
     if(msec >= 100){
@@ -49,8 +49,14 @@ function timer(){
 }
 
 function start(){
-    interval = setInterval(timer,10);
-    document.getElementById("btnStart").setAttribute("disabled","");
+    if(minHeading.value && secHeading.value && msecHeading.value == 0){
+        interval = setInterval(stopWatch,10);
+        document.getElementById("btnStart").setAttribute("disabled","");
+    }else{
+        interval = setInterval(timer,10);
+        document.getElementById("btnStart").setAttribute("disabled","");
+
+    }
 }
 
 function pause(){
@@ -63,11 +69,23 @@ function reset(){
     min = 0;
     sec = 0;
     msec = 0;
-    msecHeading.value = min;
+    minHeading.value = min;
     secHeading.value = sec;
     msecHeading.value = msec;
 }
 
+function setTimer(){
+    minHeading.focus();
+    secHeading.style.border = "1px solid #c3b20f";
+    msecHeading.style.border = "1px solid #c3b20f";
+}
+
+function borderYellow(x){
+    x.style.border = "1px solid #c3b20f";
+}
+function removeBorder(x){
+    x.style.border = 'none';
+}
 // const seconds = document.querySelector(".sec").value;
 // let counter = 0;
 // setInterval(()=>{
