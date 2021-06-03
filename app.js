@@ -33,6 +33,7 @@ var secHeading = document.getElementById("sec");
 var msecHeading = document.getElementById("msec");
 var progress = document.getElementById("progress");
 var rightProgress = document.getElementById("rightProgress");
+var heading = document.getElementById("heading");
 var interval;
 
 function stopWatch(){
@@ -112,6 +113,7 @@ function setTimer(){
     minHeading.focus();
     secHeading.style.border = "1px solid #c3b20f";
     msecHeading.style.border = "1px solid #c3b20f";
+    heading.innerHTML = "Timer";
 }
 
 function borderYellow(x){
@@ -120,6 +122,12 @@ function borderYellow(x){
 function removeBorder(x){
     x.style.border = 'none';
 }
+
+// window.addEventListener("click",function(){
+//     minHeading.style.border = 'none';
+//     secHeading.style.border = 'none';
+//     msecHeading.style.border = 'none';
+// });
 // const seconds = document.querySelector(".sec").value;
 // let counter = 0;
 // setInterval(()=>{
