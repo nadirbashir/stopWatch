@@ -31,6 +31,8 @@ var msec = 0;
 var minHeading = document.getElementById("min");
 var secHeading = document.getElementById("sec");
 var msecHeading = document.getElementById("msec");
+var progress = document.getElementById("progress");
+var rightProgress = document.getElementById("rightProgress");
 var interval;
 
 function stopWatch(){
@@ -47,22 +49,54 @@ function stopWatch(){
         sec = 0;
     }
 }
+function timer(){
+    msec--;
+    msecHeading.value = msec;
+    if(msec <= 0){
+        msec = 100;
+        sec--;
+        console.log(sec);
+        secHeading.value = sec;
+    }
+    else if(sec <= 0){
+        min--;
+        minHeading.value = min;
+        sec = 60;
+    }
+    else if (min < 0){
+        clearInterval(interval);
+        reset();
+    }
+}
+
 
 function start(){
-    if(minHeading.value && secHeading.value && msecHeading.value == 0){
+    if(minHeading.value == 0 && secHeading.value == 0 && msecHeading.value == 0){
         interval = setInterval(stopWatch,10);
         document.getElementById("btnStart").setAttribute("disabled","");
     }else{
+        min = minHeading.value;
+        sec = secHeading.value;
+        msec = msecHeading.value;
+        var totalSec = ((min * 60) + (+sec))/2;
         interval = setInterval(timer,10);
         document.getElementById("btnStart").setAttribute("disabled","");
-
+        progress.style.animationDuration = ( (totalSec+3) + 's');
+        // rightProgress.style.animationDelay = '6s';
+        rightProgress.style.animationDuration = ( (totalSec) + 's');
+        rightProgress.style.animationDelay = ((totalSec+3) + 's');
+        rightProgress.style.width = '100%';
+        rightProgress.style.height = '100%';
+        progress.style.width = '100%';
+        progress.style.height = '100%';
+        
     }
 }
 
 function pause(){
     clearInterval(interval);
     document.getElementById("btnStart").removeAttribute("disabled");
-
+    
 }
 function reset(){
     pause();
