@@ -100,7 +100,7 @@ input:focus{
     margin-right: 5px;
 }
 
-.buttons button{
+button{
     width: 100px;
     height: 50px;
     margin: 10px;
@@ -110,9 +110,13 @@ input:focus{
     border: 1px solid #c3b20f;
     border-radius: 5px;
 }
-.buttons button:hover{
+button:hover{
     transform: scale(1.1);
     cursor: pointer;
     background-color: #c3b20f;
     color: #1a1f38;
+}
+
+#timer_btn{
+ display: none;
 }

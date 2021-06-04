@@ -31,14 +31,22 @@
             </div>
         </div>
     </div>
-    <div class="buttons">
-        <button class="" id="btnStart" onclick="start()">Start</button>
-        <button class="" id="btnPause" onclick="pause()">Pause</button>
-        <button class="" id="btnReset" onclick="reset()">Reset</button>
+    <div>
+        <div id="stopWatch_btn">
+            <button class="" id="startStopWatch" onclick="startStopWatch()">Start</button>
+            <button class="" id="pause" onclick="pause()">Pause</button>
+            <button class="" id="reset" onclick="reset()">Reset</button>
+        </div>
+        <div id="timer_btn">
+            <button class="" id="startTimer" onclick="startTimer()">Start</button>
+            <button class="" id="pause" onclick="pause()">Pause</button>
+            <button class="" id="reset" onclick="reset()">Reset</button>
+        </div>
         <br>
-        <button onclick="clearScr()">Stop Watch</button>
+        <button onclick="stopWatch_btn()">Stop Watch</button>
         <button onclick="setTimer()">Set Timer</button>
     </div>
+
 </body>
 <script src="app.js"></script>
 </html>
